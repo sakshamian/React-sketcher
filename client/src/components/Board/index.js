@@ -97,10 +97,6 @@ const Board = () => {
       context.lineWidth = size;
     }
     changeConfig(color, size);
-    const handleChangeConfig = (arg) => {
-      console.log("sss", arg);
-    }
-
     socket.on("changeConfig", (arg) => changeConfig(arg.color, arg.size)
     );
 
